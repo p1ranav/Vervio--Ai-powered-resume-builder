@@ -1,0 +1,10 @@
+.dashbody{
+    background: linear-gradient(to right, #252a7c, #5d6f94,#7a8caf);
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.navbar{
+     background: linear-gradient(to right, #090d5d, #425886,#274279);
+}
