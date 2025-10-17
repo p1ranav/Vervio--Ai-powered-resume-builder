@@ -2,13 +2,13 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { UserButton, useUser } from "@clerk/clerk-react";
-import logo from "/logo.png"; // ✅ Import the logo
+import logo from "/logo.png"; 
 
 const Header = () => {
   const { isSignedIn } = useUser();
 
   return (
-    <header className="flex justify-between items-center px-8 py-4 shadow-sm">
+    <header className="flex justify-between items-center px-8 py-4 shadow-sm fixed top-0 left-0 right-0 bg-black z-50">
     
       <div className="flex items-center gap-2">
         <img src={logo} alt="Vervio Logo" className="w-10 h-10" />
@@ -24,19 +24,7 @@ const Header = () => {
           </Link>
           <UserButton />
         </div>
-      ) : (
-        <Link to="/auth/sign-in">
-          <Button
-            style={{
-              backgroundColor: "#00B4D8",
-              color: "white",
-            }}
-            className="hover:opacity-90"
-          >
-            Get Started
-          </Button>
-        </Link>
-      )}
+      ) : null}
     </header>
   );
 };
